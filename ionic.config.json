@@ -1,0 +1,7 @@
+{
+  "name": "ApplyPay",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

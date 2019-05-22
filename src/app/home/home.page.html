@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-title>
+      Apple Pay Starter
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="main-div">
+  <div padding-top>
+    <ion-img class="apple" src="assets/ios.png"></ion-img>
+    <ion-text padding-horizontal class="help-text">Ideally, you should check if Apple Pay is enabled in background, and
+      accordingly change
+      your button text
+      to "Setup Apple Pay" / "Pay with Apple Pay"</ion-text>
+    <ion-button padding-horizontal color="success" expand="full" (click)="checkApplePayValid()">Check Apple Pay
+    </ion-button>
+    <ion-list-header margin-top color="dark">Payment Options</ion-list-header>
+
+    <ion-list>
+      <ion-list-header>Items</ion-list-header>
+      <ion-item>
+        <ion-icon slot="start" name="play"></ion-icon>
+        <ion-label>{{items[0].label}}</ion-label>
+        <ion-label slot="end">{{currencyCode}} {{items[0].amount}}</ion-label>
+      </ion-item>
+      <ion-list-header>Delivery Mode</ion-list-header>
+      <ion-item>
+        <ion-icon slot="start" name="play"></ion-icon>
+        <ion-label>{{items[1].label}}</ion-label>
+        <ion-label slot="end">{{currencyCode}} {{items[1].amount}}</ion-label>
+      </ion-item>
+      <ion-list-header>Total</ion-list-header>
+      <ion-item>
+        <ion-icon slot="start" name="play"></ion-icon>
+        <ion-label>{{items[2].label}}</ion-label>
+        <ion-label slot="end">{{currencyCode}} {{items[2].amount}}</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-row>
+      <ion-col>
+        <ion-list-header>
+          Supported Networks
+        </ion-list-header>
+        <ion-row>
+          <ion-col class="network selected">
+            AMEX
+          </ion-col>
+          <ion-col class="network selected">
+            Visa
+          </ion-col>
+          <ion-col class="network">
+            Master Card
+          </ion-col>
+          <ion-col class="network">
+            Discover
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row padding-horizontal margin-top>
+      <ion-col class="bold">
+        Shipping Type
+      </ion-col>
+      <ion-col>
+        Shipping
+      </ion-col>
+    </ion-row>
+    <ion-row padding-horizontal margin-top>
+      <ion-col class="bold">
+        Country
+      </ion-col>
+      <ion-col>
+        Great Britain (GB)
+      </ion-col>
+    </ion-row>
+    <ion-row padding-horizontal margin-top>
+      <ion-col class="bold">
+        Billing Name
+      </ion-col>
+      <ion-col>
+        Enappd
+      </ion-col>
+    </ion-row>
+    <ion-row padding-horizontal margin-top>
+      <ion-col class="bold">
+        Billing Email
+      </ion-col>
+      <ion-col>
+        admin@enappd.com
+      </ion-col>
+    </ion-row>
+    <ion-row padding-horizontal margin-vertical>
+      <ion-col class="bold">
+        Billing Phone
+      </ion-col>
+      <ion-col>
+        9213213343
+      </ion-col>
+    </ion-row>
+
+    <ion-text margin-top padding-horizontal class="help-text">Apple Pay will not work properly if Apple Pay is not
+      enabled on the
+      device.</ion-text>
+    <ion-button padding-horizontal color="success" expand="full" (click)="payWithApplePay()">Pay using Apple Pay
+    </ion-button>
+
+  </div>
+</ion-content>
